@@ -5,17 +5,58 @@
  */
 package projectsmithnumberchallenge;
 
+import java.util.Scanner;
+
 /**
  *
  * @author 2020.1.08.003
  */
 public class ProjectSmithNumberChallenge {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Scanner input = new Scanner(System.in);
+        
+
+        //first 1000 smith numbers
+        for(int i = 1; i < 100; i++){
+            if(PrimeNumbers.sumOfDigits(i) == PrimeNumbers.sumOfPrimeFactors(i)){
+                System.out.println("["+ i +"] -  is a Smith Number");
+            }   
+        }
+        
+        System.out.println("Enter a number: ");
+        int number = input.nextInt();
+
+
+        while(number!=0){
+            if(PrimeNumbers.isSmithNumber(number)){
+            System.out.println(number + " is a Smith number.");
+            System.out.println("The sum of the digits of " + number + " is " + PrimeNumbers.sumOfDigitsToString(number) + ".");
+            System.out.println("The sum of the digits of the prime factors of " + number + " is " + PrimeNumbers.primeFactorsToString(number) + ".");
+
+            }
+            else{
+                System.out.println(number + " is not a Smith number.");
+                System.out.println("The sum of the digits of " + number + " is " + PrimeNumbers.sumOfDigitsToString(number));
+                System.out.println("The sum of the digits of the prime factors of " + number + " is " + PrimeNumbers.primeFactorsToString(number) + ".");
+            }
+
+            System.out.println("Enter a number: ");
+            number = input.nextInt();
+        }
+
+        
+
+
+
+        
+        
+
+
+
+
+
+
     }
     
 }

@@ -87,7 +87,7 @@ public class PrimeNumbers {
         }
         
         public static boolean isSmithNumber(int number){
-            return sumOfDigits(number) == sumOfPrimeFactors(number);
+            return (sumOfDigits(number) == sumOfPrimeFactors(number) && !isPrime(number));
         }
         
     

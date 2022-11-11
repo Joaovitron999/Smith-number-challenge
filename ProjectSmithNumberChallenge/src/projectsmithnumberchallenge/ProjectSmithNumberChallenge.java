@@ -19,7 +19,7 @@ public class ProjectSmithNumberChallenge {
 
         //first 1000 smith numbers
         for(int i = 1; i < 100; i++){
-            if(PrimeNumbers.sumOfDigits(i) == PrimeNumbers.sumOfPrimeFactors(i)){
+            if(PrimeNumbers.isSmithNumber(i)){
                 System.out.println("["+ i +"] -  is a Smith Number");
             }   
         }

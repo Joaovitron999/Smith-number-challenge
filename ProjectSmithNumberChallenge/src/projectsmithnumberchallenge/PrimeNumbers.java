@@ -25,10 +25,12 @@ public class PrimeNumbers {
         
         public static int sumOfDigits(int number){
             int sum = 0;
-            while(number > 0){
-                sum += number % 10;
-                number /= 10;
+            
+            String s = ""+number;
+            for(int i = 0; i < s.length(); i++){
+                sum += Integer.parseInt(s.substring(i, i+1));
             }
+
             return sum;
         }
 

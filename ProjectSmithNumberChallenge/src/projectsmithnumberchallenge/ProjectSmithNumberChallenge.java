@@ -15,10 +15,34 @@ public class ProjectSmithNumberChallenge {
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
+
+        int cases = input.nextInt();
+        int[] numbers = new int[cases];
+        for(int i = 0; i < cases; i++){
+            numbers[i] = input.nextInt();
+        }
+
+        for(int i = 0; i < cases; i++){
+            int n = numbers[i]+1;
+            while(!(PrimeNumbers.isSmithNumber(n))){
+                n++;
+            }
+            System.out.println(n);
+        }
         
 
+
+    
+        
+        //TESTES
+    /* 
+ 
+         
+
+
+        
         //first 1000 smith numbers
-        for(int i = 1; i < 100; i++){
+        for(int i = 1; i < 1000; i++){
             if(PrimeNumbers.isSmithNumber(i)){
                 System.out.println("["+ i +"] -  is a Smith Number");
             }   
@@ -45,7 +69,7 @@ public class ProjectSmithNumberChallenge {
             number = input.nextInt();
         }
 
-        
+    */   
 
 
 
